@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Créditos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Créditos</h1>
+
+        <!-- Formulario -->
+        <form id="creditoForm">
+            <input type="hidden" id="creditoId" value="">
+            <label>Cliente:</label>
+            <input type="text" id="cliente" required>
+            <label>Monto:</label>
+            <input type="number" id="monto" step="0.01" required>
+            <label>Tasa de Interés (%):</label>
+            <input type="number" id="tasa_interes" step="0.01" required>
+            <label>Plazo (meses):</label>
+            <input type="number" id="plazo" required>
+            <label>Fecha de Otorgamiento:</label>
+            <input type="date" id="fecha_otorgamiento" required>
+            <button type="submit">Guardar Crédito</button>
+        </form>
+
+        <!-- Tabla -->
+        <table border="1" id="tablaCreditos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Monto</th>
+                    <th>Tasa Interés</th>
+                    <th>Plazo</th>
+                    <th>Fecha Otorgamiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <!-- Gráfica de distribución por cliente -->
+        <h2>Distribución de Créditos por Cliente</h2>
+        <canvas id="graficoClientes" width="600" height="400"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
