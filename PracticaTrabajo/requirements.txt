@@ -1,8 +1,0 @@
-Herramienta web de Registro de créditos 
-
-Herramienta que permite realizar operaciones CRUD a registros con ayuda de una API desarrollada con Python-Flask 
-y capaz de almacenar dichos registros en una base de datos SQLite 
-
-Tecnologías utilizadas:
-Python, Flask y SQLite
-HTML, CSS, JavaScript y Chart.js
